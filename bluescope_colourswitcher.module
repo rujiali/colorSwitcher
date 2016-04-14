@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function bluescope_colourswitcher_theme() {
+  return [
+    'colourscheme' => [
+      'variables' => [
+        'images' => [],
+        'schemes' => [],
+        'colours' => [],
+      ],
+      'template' => 'bluescope_colourswitcher',
+    ],
+  ];
+}

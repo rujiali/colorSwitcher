@@ -1,0 +1,7 @@
+bluescope_colourswitcher.content:
+  path: '/roofing-colour-scheme-explorer'
+  defaults:
+    _controller: '\Drupal\bluescope_colourswitcher\Controller\bluescope_colourswitcherController::content'
+    _title: 'COLORBOND® Steel roofing colour scheme explorer'
+  requirements:
+    _permission: 'access content'

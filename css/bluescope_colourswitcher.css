@@ -1,0 +1,151 @@
+.path-roofing-colour-scheme-explorer .main-container {
+  width: 100%;
+  padding: 0;
+}
+
+.upper-row {
+  width: 100%;
+  display: block;
+}
+
+canvas {
+  background: #cccccc;
+  width: 500px;
+  height: 325px;
+}
+
+@media screen and (min-width: 1200px) {
+  canvas {
+    background: #cccccc;
+    width: 930px;
+    height: 600px;
+  }
+
+  .wrapper {
+    display: block;
+    width: 1200px;
+    margin: auto;
+  }
+
+  .color-panel {
+    display: block;
+    padding: 10px;
+    max-height: 215px;
+    overflow-y: scroll;
+  }
+
+  .col-2 {
+    width: 270px;
+    float: right;
+  }
+
+  .house-image img {
+    max-width: 100%;
+    max-height: 100px;
+    margin: auto;
+  }
+
+}
+
+.color-panel {
+  display: block;
+  padding: 10px;
+  height: 215px;
+  overflow-y: scroll;
+}
+
+.roof-color-name {
+  display: block;
+  padding: 10px;
+}
+
+.color-panel .color-div {
+  display: block;
+  float: left;
+}
+
+.color-panel a {
+  height: 45px;
+  width: 47px;
+  display: block;
+  background: #eeeeee;
+  margin: 5px;
+}
+
+.scheme {
+  width: 100%;
+  background: #EEECED;
+  padding: 45px 60px 70px 60px;
+  display: inline-block;
+}
+
+.wrapper {
+  display: block;
+  margin: auto;
+}
+
+.scheme h2 {
+  margin-bottom: 60px;
+}
+
+.scheme h3 {
+  margin-top: 0;
+}
+
+.scheme-row {
+  margin-bottom: 25px;
+}
+
+.scheme-door-color,
+.scheme-window-color,
+.scheme-wall-color,
+.scheme-garage-color,
+.scheme-fasia-color,
+.scheme-downpipes-color {
+  width: 70px;
+  height: 70px;
+  float: left;
+  background: #0071b3;
+  border: 5px solid white;
+  margin-right: 20px;
+}
+
+.scheme-text-wrapper {
+  height: 70px;
+  padding-top: 10px;
+}
+
+.roofing {
+  display: block;
+  height: 260px;
+  width: 30%;
+  float: left;
+  background: #40434C;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  border: 5px solid white;
+}
+
+.scheme-row1,
+.scheme-row2 {
+  display: block;
+  height: 260px;
+  width: 30%;
+  float: left;
+  margin-left: 20px;
+  padding-left: 100px;
+}
+
+.color-schemes {
+  padding: 45px 60px 60px 60px;
+}
+
+.color-schemes h2 {
+  margin-bottom: 45px;
+}
+
+.scheme-name img {
+  width: 80%;
+  margin: auto;
+}

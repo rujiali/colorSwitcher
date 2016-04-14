@@ -1,0 +1,5 @@
+name: Bluescope Colour Switcher
+core: 8.x
+description: Create a page that allows user to switch the colour of selected house image.
+type: module
+package: BlueScope
