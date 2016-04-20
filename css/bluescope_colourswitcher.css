@@ -8,17 +8,102 @@
   display: block;
 }
 
+a.active {
+  box-shadow: 5px 5px 5px #888888;
+}
+
 canvas {
   background: #cccccc;
   width: 500px;
   height: 325px;
 }
 
+@media screen and (min-width: 300px) {
+  canvas {
+    width: 320px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  canvas {
+    width: 768px;
+    height: 520px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  canvas {
+    background: #cccccc;
+    width: 712px;
+    height: 500px;
+  }
+
+  .color-panel {
+    display: block;
+    padding: 10px;
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+
+  .wrapper {
+    display: block;
+    width: 992px;
+    margin: auto;
+  }
+
+  .col-2 {
+    width: 280px;
+    float: right;
+  }
+
+  .roofcolor {
+    text-align: left!important;
+  }
+
+  .roof-color h3 {
+    text-align: left!important;
+  }
+
+  .house-image img {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .roofing {
+    display: block;
+    height: 260px;
+    width: 30%!important;
+    float: left;
+    background: #40434C;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    border: 5px solid white;
+  }
+
+  .scheme-row1,
+  .scheme-row2 {
+    display: block;
+    height: 260px;
+    width: 30%!important;
+    float: left;
+    margin-left: 20px!important;
+    padding-left: 100px!important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   canvas {
     background: #cccccc;
-    width: 930px;
+    width: 920px;
     height: 600px;
+  }
+
+  .color-panel {
+    display: block;
+    padding: 10px;
+    max-height: 280px;
+    overflow-y: scroll;
   }
 
   .wrapper {
@@ -27,29 +112,26 @@ canvas {
     margin: auto;
   }
 
-  .color-panel {
-    display: block;
-    padding: 10px;
-    max-height: 215px;
-    overflow-y: scroll;
-  }
-
   .col-2 {
-    width: 270px;
+    width: 280px;
     float: right;
   }
 
   .house-image img {
-    max-width: 100%;
-    max-height: 100px;
+    max-width: 250px;
     margin: auto;
   }
 
 }
 
+.house-image img {
+  max-width: 250px;
+  margin: auto;
+}
+
 .color-panel {
   display: block;
-  padding: 10px;
+  padding: 10px 0px 10px 10px;
   height: 215px;
   overflow-y: scroll;
 }
@@ -72,6 +154,32 @@ canvas {
   margin: 5px;
 }
 
+.roofcolor {
+  padding: 10px 0px 15px 10px;
+  text-align: center;
+}
+
+.roofcolor h3 {
+  margin-top: 0px;
+}
+
+.roof-color h3 {
+  text-align: center;
+}
+
+.style-house {
+  background: #F4F4F4;
+  padding: 10px 10px 15px 10px;
+}
+
+.roof-color {
+  padding: 10px;
+}
+
+.roof-color h3 {
+  margin-top: 0px;
+}
+
 .scheme {
   width: 100%;
   background: #EEECED;
@@ -82,6 +190,7 @@ canvas {
 .wrapper {
   display: block;
   margin: auto;
+  text-align: center;
 }
 
 .scheme h2 {
@@ -96,6 +205,27 @@ canvas {
   margin-bottom: 25px;
 }
 
+.roofing {
+  display: block;
+  height: 260px;
+  width: 100%;
+  float: left;
+  background: #40434C;
+  color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  border: 5px solid white;
+}
+
+.scheme-row1,
+.scheme-row2 {
+  display: block;
+  height: 260px;
+  width: 100%;
+  float: left;
+  margin-left: 0px;
+  padding-left: 0px;
+}
 .scheme-door-color,
 .scheme-window-color,
 .scheme-wall-color,
@@ -115,27 +245,6 @@ canvas {
   padding-top: 10px;
 }
 
-.roofing {
-  display: block;
-  height: 260px;
-  width: 30%;
-  float: left;
-  background: #40434C;
-  color: white;
-  padding-top: 20px;
-  padding-left: 20px;
-  border: 5px solid white;
-}
-
-.scheme-row1,
-.scheme-row2 {
-  display: block;
-  height: 260px;
-  width: 30%;
-  float: left;
-  margin-left: 20px;
-  padding-left: 100px;
-}
 
 .color-schemes {
   padding: 45px 60px 60px 60px;

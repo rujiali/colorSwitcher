@@ -83,8 +83,11 @@
 
         // Change color name
         $('.roof-color-name').text(color[$(this).attr('class')].name);
+        $('.roofcolor').css({ "background": color[$(this).attr('class')].name });
+        $('.color-div a').removeClass('active');
 
         code = color[$(this).attr('class')].code;
+        $(this).addClass('active');
 
         convertBack();
 
@@ -109,11 +112,13 @@
 
 
         // Re-draw image
+        /**
         img.src = $(this).find('img').attr('src');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, 0, 0, img.width, img.height,
             0, 0, canvas.width, canvas.height);
         $globalImgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+         **/
       });
 
       function convertBack() {
@@ -223,6 +228,7 @@
 
       $('.house-image', context).slick({
         dots: false,
+        arrows: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -230,10 +236,32 @@
 
       $('.scheme-switcher', context).slick({
         dots: false,
+        arrows: true,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              centerPadding: '10px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: true,
+              centerMode: true,
+              centerPadding: '10px',
+              slidesToShow: 1
+            }
+          }
+        ]
       });
     }
   };
+
 })(jQuery);
