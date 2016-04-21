@@ -23,11 +23,18 @@ canvas {
     width: 320px;
     height: 200px;
   }
+  .paginator-center {
+    right: 20%!important;
+  }
 }
 @media screen and (min-width: 768px) {
   canvas {
     width: 768px;
     height: 520px;
+  }
+
+  .paginator-center {
+    right: 35%!important;
   }
 }
 
@@ -43,6 +50,10 @@ canvas {
     padding: 10px;
     max-height: 100px;
     overflow-y: scroll;
+  }
+
+  .paginator-center {
+    right: 10%!important;
   }
 
   .wrapper {
@@ -106,6 +117,10 @@ canvas {
     overflow-y: scroll;
   }
 
+  .paginator-center {
+    right: 10%;
+  }
+
   .wrapper {
     display: block;
     width: 1200px;
@@ -154,6 +169,11 @@ canvas {
   margin: 5px;
 }
 
+.paginator-center {
+  position: absolute;
+  bottom: 20px;
+}
+
 .roofcolor {
   padding: 10px 0px 15px 10px;
   text-align: center;
@@ -170,6 +190,7 @@ canvas {
 .style-house {
   background: #F4F4F4;
   padding: 10px 10px 15px 10px;
+  position: relative;
 }
 
 .roof-color {
@@ -248,6 +269,20 @@ canvas {
 
 .color-schemes {
   padding: 45px 60px 60px 60px;
+  position: relative;
+}
+
+span.scheme-prev {
+  position: absolute;
+  top: 140px;
+  z-index: 9999;
+}
+
+span.scheme-next {
+  position: absolute;
+  top: 140px;
+  right: 60px;
+  z-index: 9999;
 }
 
 .color-schemes h2 {

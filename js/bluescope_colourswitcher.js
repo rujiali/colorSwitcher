@@ -231,7 +231,9 @@
         arrows: true,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
       });
 
       $('.scheme-switcher', context).slick({
@@ -240,6 +242,8 @@
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
+        prevArrow: $('.scheme-prev'),
+        nextArrow: $('.scheme-next'),
         responsive: [
           {
             breakpoint: 768,
