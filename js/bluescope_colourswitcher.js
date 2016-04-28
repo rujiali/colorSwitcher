@@ -56,11 +56,11 @@
       var color = {};
       color["yellow"] = {}
       color.yellow.name = "yellow";
-      color.yellow.code = 60;
+      color.yellow.code = "bfbd40";
 
       color["blue"] = {}
       color.blue.name = "blue";
-      color.blue.code = 240;
+      color.blue.code = "#2a00ff";
 
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
@@ -92,10 +92,11 @@
         convertBack();
 
         // shift blueish colors to greenish colors
-        recolorPants(code);
+        recolor(code);
       });
 
       $(".house-image.slick-slider").on("click", ".slick-slide", function() {
+        $('.color-div a').removeClass('active');
         // Re-draw image
         img.src = $(this).find('img').attr('src');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -127,7 +128,7 @@
 
       }
 
-      function recolorPants(colorshift) {
+      function recolor(colorshift) {
 
         var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
         var data = imgData.data;
@@ -143,12 +144,15 @@
             continue;
           }
 
-          // var hsl = rgbToHsl(red, green, blue);
-          // var hue = hsl.h * 360;
+          var hsl = rgbToHsl(red, green, blue);
+          var hue = hsl.h * 360;
+
+          var new_color = hexToRgb(colorshift);
+          new_color = rgbToHsl(new_color.r, new_color.g, new_color.b);
 
           // change blueish pixels to the new color
-          if (red == 255 && green == 255 && blue == 255) {
-            var newRgb = hslToRgb(colorshift/360, .5, .5);
+          if (hue > 340 || hue < 10) {
+            var newRgb = hslToRgb(hsl.h + new_color.h, hsl.s, hsl.l);
             data[i + 0] = newRgb.r;
             data[i + 1] = newRgb.g;
             data[i + 2] = newRgb.b;
@@ -158,6 +162,23 @@
         ctx.putImageData(imgData, 0, 0);
       }
 
+      function hexToRgb(color) {
+        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+        color = color.replace(shorthandRegex, function(m, r, g, b) {
+          return r + r + g + g + b + b;
+        });
+
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+        return result ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16)
+        } : {
+          r: 0,
+          g: 0,
+          b: 0
+        };
+      }
 
       function rgbToHsl(r, g, b) {
         r /= 255, g /= 255, b /= 255;
